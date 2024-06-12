@@ -1,5 +1,7 @@
 package org.b0b0bo.pathspeedboost;
 
+import org.b0b0bo.pathspeedboost.commands.PathSpeedBoostCommand;
+import org.b0b0bo.pathspeedboost.listeners.PlayerMoveListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
