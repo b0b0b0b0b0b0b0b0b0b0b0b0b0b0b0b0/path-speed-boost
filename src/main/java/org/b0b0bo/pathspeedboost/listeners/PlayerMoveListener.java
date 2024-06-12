@@ -26,7 +26,7 @@ public class PlayerMoveListener implements Listener {
         float defaultSpeed = 0.2f;
         float boostedSpeed = defaultSpeed * PathSpeedBoostPlugin.getSpeedMultiplier();
 
-        if (block.getType() == Material.DIRT_PATH) {
+        if (block.getType() == Material.GRASS_PATH) {
             player.setWalkSpeed(boostedSpeed);
         } else {
             player.setWalkSpeed(defaultSpeed);

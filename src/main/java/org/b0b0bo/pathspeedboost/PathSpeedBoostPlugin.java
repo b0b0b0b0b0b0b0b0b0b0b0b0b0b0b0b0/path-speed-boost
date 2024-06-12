@@ -20,11 +20,6 @@ public class PathSpeedBoostPlugin extends JavaPlugin {
         Objects.requireNonNull(getCommand("psb")).setTabCompleter(new PathSpeedBoostCommand(this));
     }
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
-    }
-
     public static float getSpeedMultiplier() {
         return speedMultiplier;
     }
