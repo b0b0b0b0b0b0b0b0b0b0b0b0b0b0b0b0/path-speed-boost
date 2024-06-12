@@ -1,5 +1,15 @@
-name: path-speed-boost
-version: 1
+name: PathSpeedBoost
+version: 1.0
 main: org.b0b0bo.pathspeedboost.PathSpeedBoostPlugin
-api-version: '1.19'
-description: Увеличивает скорость игрока при беге по тропинке.
+api-version: 1.19
+description: Increases player speed by a configurable percentage when moving on a dirt path.
+commands:
+  psb:
+    description: Main command for the Path Speed Boost Plugin.
+    usage: /<command> reload
+    aliases: [pathspeedboost]
+    permission: pathspeedboost.reload
+permissions:
+  pathspeedboost.reload:
+    description: Allows the user to reload the Path Speed Boost Plugin configuration.
+    default: op

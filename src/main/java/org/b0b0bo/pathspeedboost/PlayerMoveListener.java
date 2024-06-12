@@ -6,7 +6,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.entity.Player;
-import org.bukkit.Bukkit;
 
 public class PlayerMoveListener implements Listener {
 
@@ -15,10 +14,13 @@ public class PlayerMoveListener implements Listener {
         Player player = event.getPlayer();
         Block block = player.getLocation().getBlock();
 
+        float defaultSpeed = 0.2f;
+        float boostedSpeed = defaultSpeed * PathSpeedBoostPlugin.getSpeedMultiplier();
+
         if (block.getType() == Material.DIRT_PATH) {
-            player.setWalkSpeed(0.28f);
+            player.setWalkSpeed(boostedSpeed);
         } else {
-            player.setWalkSpeed(0.2f);
+            player.setWalkSpeed(defaultSpeed);
         }
     }
 }
