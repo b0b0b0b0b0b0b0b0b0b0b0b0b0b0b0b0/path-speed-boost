@@ -1,0 +1,5 @@
+name: path-speed-boost
+version: 1
+main: org.b0b0bo.pathspeedboost.PathSpeedBoostPlugin
+api-version: '1.19'
+description: Увеличивает скорость игрока при беге по тропинке.
