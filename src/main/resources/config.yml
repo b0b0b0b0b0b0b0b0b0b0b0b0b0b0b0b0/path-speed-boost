@@ -1,18 +1,17 @@
 # Path Speed Boost Plugin Configuration
-# Adjust the speed multiplier for players running on dirt paths.
-# The multiplier determines how much faster the player will move compared to the default speed.
-# For example:
-#   1.0 = 0% increase (default speed)
-#   1.1 = 10% increase
-#   1.2 = 20% increase
-#   1.3 = 30% increase
-#   1.4 = 40% increase (default)
-#   1.5 = 50% increase
-#   1.6 = 60% increase
-#   1.7 = 70% increase
-#   1.8 = 80% increase
-#   1.9 = 90% increase
-#   2.0 = 100% increase (double speed)
 
-  # Set the speed multiplier here:
-  speed-multiplier: 1.4
+# Set the speed multiplier for players here:
+player-speed-multiplier: 1.4
+# Set the speed multiplier for mounts (horses and pigs) here:
+mount-speed-multiplier: 1.4
+# Enable or disable path speed boost for players:
+enable-path-speed-boost: true
+
+# Adjust the speed reduction multiplier for players walking through tall grass.
+tall-grass-reduction-multiplier: 0.5
+
+# Enable or disable tall grass speed reduction for players:
+enable-tall-grass-speed-reduction: true
+
+# Enable or disable mount path speed boost:
+enable-mount-path-speed-boost: true
