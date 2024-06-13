@@ -5,7 +5,6 @@ authors:
   - b0b0b0
   - 1050TI_top
   - OverwriteMC
-api-version: 1.9
 description: Increases player speed by a configurable percentage when moving on a dirt path.
 commands:
   psb:
