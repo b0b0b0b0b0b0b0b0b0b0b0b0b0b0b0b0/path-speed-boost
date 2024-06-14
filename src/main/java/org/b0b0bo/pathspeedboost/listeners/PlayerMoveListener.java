@@ -16,7 +16,7 @@ public class PlayerMoveListener implements Listener {
         Location from = event.getFrom();
         Location to = event.getTo();
 
-        if (!hasMoved(from, to)) {
+        if (!hasPlayerMoved(from, to)) {
             return;
         }
 
@@ -24,16 +24,33 @@ public class PlayerMoveListener implements Listener {
         Block block = player.getLocation().getBlock();
 
         float defaultSpeed = 0.2f;
-        float boostedSpeed = defaultSpeed * PathSpeedBoostPlugin.getSpeedMultiplier();
+        player.setWalkSpeed(defaultSpeed);
 
-        if (block.getType() == Material.GRASS_PATH) {
+        handlePathSpeed(player, block);
+
+        handleTallGrassSpeed(player, block);
+    }
+
+    private void handlePathSpeed(Player player, Block block) {
+        float boostedSpeed = 0.2f * PathSpeedBoostPlugin.getSpeedMultiplier();
+
+        if (block.getType().toString().contains("GRASS_PATH")) {
             player.setWalkSpeed(boostedSpeed);
-        } else {
-            player.setWalkSpeed(defaultSpeed);
+            //player.sendMessage("Block: " + block.getType() + " Data: " + block.getData());
         }
     }
 
-    private boolean hasMoved(Location from, Location to) {
+    private void handleTallGrassSpeed(Player player, Block block) {
+        float reducedSpeed = 0.2f * PathSpeedBoostPlugin.getTallGrassSpeedMultiplier();
+
+        if ((block.getType() == Material.getMaterial("DOUBLE_PLANT") && block.getData() == 2) ||
+                (block.getType() == Material.getMaterial("TALL_GRASS") && block.getData() == 2)) {
+            player.setWalkSpeed(reducedSpeed);
+            //player.sendMessage("Tall Grass Block: " + block.getType() + " Data: " + block.getData());
+        }
+    }
+
+    private boolean hasPlayerMoved(Location from, Location to) {
         return from.getX() != to.getX() || from.getY() != to.getY() || from.getZ() != to.getZ();
     }
 }

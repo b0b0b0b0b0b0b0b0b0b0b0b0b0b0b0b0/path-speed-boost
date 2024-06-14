@@ -1,5 +1,5 @@
-name: PathSpeedBoost
-version: 1.3
+name: PSB
+version: 1.4.2
 main: org.b0b0bo.pathspeedboost.PathSpeedBoostPlugin
 authors:
   - b0b0b0
@@ -8,11 +8,13 @@ authors:
 description: Increases player speed by a configurable percentage when moving on a dirt path.
 commands:
   psb:
-    description: Main command for the Path Speed Boost Plugin.
-    usage: /<command> reload
+    description: Main command for the PSB Plugin.
+    usage: /<command> <subcommand>
     aliases: [pathspeedboost]
-    permission: pathspeedboost.reload
+    permission: pathspeedboost.admin
+    permission-message: You do not have permission to use this command.
 permissions:
-  pathspeedboost.reload:
-    description: Allows the user to reload the Path Speed Boost Plugin configuration.
+  pathspeedboost.admin:
+    description: Allows the user to reload the PSB Plugin configuration and open the settings GUI.
     default: op
+

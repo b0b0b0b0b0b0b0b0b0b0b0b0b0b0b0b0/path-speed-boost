@@ -1,4 +1,9 @@
 # Path Speed Boost Plugin Configuration
+
+# Language setting: 'en' for English, 'ru' for Russian
+language: 'en'
+
+# Path Speed Boost Plugin Configuration
 # Adjust the speed multiplier for players running on dirt paths.
 # The multiplier determines how much faster the player will move compared to the default speed.
 # For example:
@@ -14,5 +19,29 @@
 #   1.9 = 90% increase
 #   2.0 = 100% increase (double speed)
 
-  # Set the speed multiplier here:
-  speed-multiplier: 1.4
+# Set the speed multiplier here:
+speed-multiplier: 1.4
+
+# Adjust the speed multiplier for players moving through tall grass.
+# For example:
+#   1.0 = 0% decrease (default speed)
+#   0.9 = 10% decrease
+#   0.8 = 20% decrease
+#   0.7 = 30% decrease
+#   0.6 = 40% decrease
+#   0.5 = 50% decrease (default)
+#   0.4 = 60% decrease
+#   0.3 = 70% decrease
+#   0.2 = 80% decrease
+#   0.1 = 90% decrease
+#   0.0 = 100% decrease (no movement)
+
+# Set the speed multiplier for tall grass here:
+tall-grass-speed-multiplier: 0.5
+
+# =====================================================
+# CONFIGURATION VERSION
+# =====================================================
+# DO NOT CHANGE THIS VERSION NUMBER
+# =====================================================
+version: 1
