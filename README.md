@@ -55,7 +55,7 @@ speed-multiplier: 1.4
 tall-grass-speed-multiplier: 0.5
 
 # Configuration file version (Do not change)
-version: 2
+version: 1
 ```
 
 ## Commands
