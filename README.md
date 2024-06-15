@@ -12,7 +12,7 @@ This Minecraft plugin adjusts the player's speed based on their location, provid
 
 ## Configuration
 
-To adjust the speed multipliers, edit the `config.yml` file located in the `plugins/PathSpeedBoost` directory.
+To adjust the speed multipliers, edit the `config.yml` file located in the `plugins/PSB` directory.
 
 ### Example `config.yml`:
 ```yaml
