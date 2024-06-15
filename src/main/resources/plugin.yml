@@ -1,5 +1,5 @@
 name: PSB
-version: 1.4.3
+version: ${project.version}
 main: org.b0b0bo.pathspeedboost.PathSpeedBoostPlugin
 authors:
   - b0b0b0

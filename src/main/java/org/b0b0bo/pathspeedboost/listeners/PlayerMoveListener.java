@@ -27,7 +27,6 @@ public class PlayerMoveListener implements Listener {
         player.setWalkSpeed(defaultSpeed);
 
         handlePathSpeed(player, block);
-
         handleTallGrassSpeed(player, block);
     }
 
@@ -42,8 +41,8 @@ public class PlayerMoveListener implements Listener {
 
     private void handleTallGrassSpeed(Player player, Block block) {
         float reducedSpeed = 0.2f * PathSpeedBoostPlugin.getTallGrassSpeedMultiplier();
-
-        if ((block.getType() == Material.getMaterial("DOUBLE_PLANT") && block.getData() == 2) ||
+        // player.sendMessage("Tall Grass Block: " + block.getType() + " Data: " + block.getData());
+        if ((block.getType() == Material.getMaterial("DOUBLE_PLANT")) ||
                 (block.getType() == Material.getMaterial("TALL_GRASS") && block.getData() == 2)) {
             player.setWalkSpeed(reducedSpeed);
             //player.sendMessage("Tall Grass Block: " + block.getType() + " Data: " + block.getData());
